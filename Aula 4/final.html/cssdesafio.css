@@ -1,0 +1,32 @@
+body{ 
+    background-color: rgb(230, 198, 215);
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+font-size: 25px;
+}
+
+h2{
+    background-color: rgb(230, 230, 234);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 25px;
+    color: rgb(70, 14, 49);
+}
+
+.p1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+    font-size: 20px;
+    color: rgb(44, 43, 44);
+}
+
+.p2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 25px;
+    color: black;
+}
+
+
+
+
