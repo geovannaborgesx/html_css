@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(255, 255, 255, 0.833);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.container{
+    background-color: rgba(212, 184, 200, 0.782);
+    padding: 20px;
+    margin: 20px;
+
+}
+button{
+background-color: rgb(243, 205, 220);
+color: black;
+padding: 10px;
+margin: 5px;
+border: none;
+}
+
+.formulario{
+    background-color: rgba(255, 255, 254, 0.693);
+    padding: 15px;
+    margin: 10px;
+
+}
