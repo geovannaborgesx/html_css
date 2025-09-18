@@ -1,0 +1,53 @@
+/* Estilo geral */
+body{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1,6;
+    margin: 20px;
+}
+/* Exemplo 1: Imagem com texto */
+img{
+    float: left;
+    margin: 10px;
+    width: 150px;
+    height: auto;
+
+}
+/* Exemplo 2: Duas barras */
+.container{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+/* clearfix para corrigir o colapso */
+.container ::after{
+    content: "";
+    display: block;
+    clear: both;
+    }
+.coluna{
+    width: 48%;
+    padding: 20px;
+    color: white;
+}
+
+.esquerda{
+    float: left;
+    background: #0096c7;
+}
+.direita{
+    float: right;
+    background: #0077b6;
+}
+/* Exemplo 3: Clear */
+.box{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    margin-right: 10px;
+}
+.clear{
+    clear: both;
+    font-weight: bold;
+
+}
