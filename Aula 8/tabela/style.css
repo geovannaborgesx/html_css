@@ -1,0 +1,129 @@
+.tabela1{
+    text-align: center;
+    border: solid rgb(0, 0, 0);
+}
+
+.tabela1 th{
+    color: rgb(0, 0, 0);
+}
+
+.tabela2{
+    text-align: center;
+    background-color: rgba(74, 73, 74, 0.232);
+}
+
+.tabela3{
+    color: rgb(6, 6, 94);
+    border: solid rgb(69, 66, 66);
+}
+
+.tabela4{
+    text-align: center;
+    font-family:  Arial;
+    border: solid rgb(60, 59, 59);
+}
+
+.tabela5{
+    text-align: center;
+    border: solid rgb(45, 45, 45);
+}
+.tabela5 th{
+ font-size: 20px;
+}
+
+.tabela6{
+    background-color: rgba(240, 222, 198, 0.563);
+    border: solid rgb(94, 54, 1);
+}
+
+.tabela7{
+    text-align: center;
+    border: solid rgb(126, 126, 126);
+    background-color: aliceblue;
+}
+
+.tabela8{
+    text-align: center;
+    border: 5px solid rgb(55, 55, 55);
+}
+
+.tabela9{
+    border: solid black;
+}
+
+.tabela9 th{
+    color: rgb(197, 11, 11);
+
+}
+
+.tabela10{
+    border: solid rgb(62, 62, 62);
+    text-align: center;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabela11{
+    border: solid rgb(66, 65, 65);
+    text-align: center;
+}
+
+.tabela11 th{
+    color: rgb(128, 128, 128);
+}
+
+.tabela12{
+    border: 3px solid rgb(54, 54, 54);
+    text-align: center;
+}
+
+.tabela13{
+    border: solid black;
+    text-align: center;
+}
+
+.tabela14{
+    border: solid rgb(44, 44, 44);
+    color: rgb(10, 52, 17);
+}
+
+.tabela15{
+    border: solid rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 7px;
+    font-size: 15px;
+}
+
+.tabela16{
+    border: solid rgb(20, 20, 20);
+}
+
+.tabela17{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: solid black;
+    text-align: center;
+}
+
+.tabela18{
+    text-transform: uppercase;
+    border: solid rgb(27, 27, 27);
+    text-align: center;
+}
+
+.tabela19{
+    border: solid rgb(29, 29, 29);
+    text-align: center;
+}
+
+.tabela19 th{
+    color: rgb(106, 22, 22);
+   text-align: center; 
+}
+
+.tabela20 {
+    background-color: rgb(23, 21, 21);
+    color: aliceblue;
+    text-align: center;
+}
+
