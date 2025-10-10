@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Times New Roman', Times, serif;}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(Imagens/imagem.jpg);
+  min-height: 90%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">NÓS</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTATO</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-topright w3-padding">
+    <span class="w3-tag w3-xlarge">Aberto das 10 ás 00h</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Bella<br>Pizzavanna</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+    
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Menu da Casa</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Massas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Entradas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Mini');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Mini Pizzas</div>
+      </a>
+       <a href="javascript:void(0)" onclick="openMenu(event, 'Doces');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza Doces</div>
+       </a>
+       <a href="javascript:void(0)" onclick="openMenu(event, 'Bebidas');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Bebidas</div>
+       </a>
+</div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Margaterita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$50.20</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela fresca, manjericacão fresco</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$45.20</span></h1>
+      <p class="w3-text-grey">4 queijos(mussarela, parmesão, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Frango</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$49.00</span></h1>
+      <p class="w3-text-grey">Tomates frescos, mussarela,frango, cebola</p>
+      <hr>
+
+      <h1><b>Redonda de abacaxi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$49.99</span></h1>
+      <p class="w3-text-grey">Tomates frecos, mussarela, abacaxi fresco, bacon, manjericacão fresco</p>
+      <hr>
+
+      <h1><b>Super redonda</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$53.00</span></h1>
+      <p class="w3-text-grey">Tomates frecos, mussarela, calabresa picante,frango</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">Novo</span><span class="w3-right w3-tag w3-dark-grey w3-round">$54.50</span></h1>
+      <p class="w3-text-grey">Tomates frecos, mussarela, parma, bacon, rúcula fresca</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasanha</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$50.00</span></h1>
+      <p class="w3-text-grey">Molho especial, mussarela, parmesão, carne moída</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$45.00</span></h1>
+      <p class="w3-text-grey">Ravióli recheado com queijo</p>
+      <hr>
+      
+      <h1><b>Espaguete Clássico</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$56.00</span></h1>
+      <p class="w3-text-grey">Tomates frescos, cebolas, carne moída</p>
+      <hr>
+
+      <h1><b>Macarrão com frutos do mar</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$60.00</span></h1>
+      <p class="w3-text-grey">Salmão, camarão, lagosta, alho</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Sopa do Dia</b> <span class="w3-tag w3-grey w3-round">Sazonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$19.00</span></h1>
+      <p class="w3-text-grey">Pergunte ao garçom</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.00</span></h1>
+      <p class="w3-text-grey">Pão com pesto, tomates, cebola e alho</p>
+      <hr>
+      
+      <h1><b>Pão de Alho</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$20.55</span></h1>
+      <p class="w3-text-grey">Ciabatta grelhada, manteiga de alho e cebolas</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomates e mussarela</p>
+    </div><br>
+
+    <div id="Mini" class="w3-container menu w3-padding-32 w3-white">
+   
+      <h1><b>Calabresa</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$27.00</span></h1>
+      <p class="w3-text-grey">Calabresa, cebola, azeitona  </p>
+      <hr>
+      
+      <h1><b>4 Queijos</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$28,00</span></h1>
+      <p class="w3-text-grey">Mussarela, parmesão, gorgonzola, prato</p>
+      <hr>
+
+       <h1><b>Brocólis </b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25,00</span></h1>
+      <p class="w3-text-grey">Mussarela, brocolis, bacon, azeitona preta</p>
+      <hr>
+    </div>
+
+    <div id="Doces" class="w3-container menu w3-padding-32 w3-white">
+   
+      <h1><b>Ninho com Nutela</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$30.00</span></h1>
+      <p class="w3-text-grey">Ninho, Nutela, granulado</p>
+      <hr>
+      
+      <h1><b>Morango com Chocolate</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$30,00</span></h1>
+      <p class="w3-text-grey">Morango, chocolate, chantilly</p>
+      <hr>
+
+       <h1><b>Ouro Branco</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$47,00</span></h1>
+      <p class="w3-text-grey">Chocola branco, mm's , ninho</p>
+      <hr>
+    </div>
+
+    <div id="Bebidas" class="w3-container menu w3-padding-32 w3-white">
+   
+      <h1><b>Coca</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">coca lata</p>
+      <hr>
+      
+      <h1><b>Fanta laranja</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11,00</span></h1>
+      <p class="w3-text-grey">em lata</p>
+      <hr>
+,
+       <h1><b>Sprite</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$ 8,40</span></h1>
+      <p class="w3-text-grey">em lata</p>
+      <hr>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Sobre nós</h1>
+    <p>Fundada em 1999, a GeoPizza se dedica a oferecer experiências gastronômicas únicas, com ingredientes selecionados e sabor autêntico que diferenciam nossa casa.
+Cada pizza é preparada com cuidado e atenção aos detalhes, garantindo qualidade e excelência em cada fatia.
+Nosso compromisso é proporcionar momentos inesquecíveis aos nossos clientes, unindo tradição e inovação em cada receita.</p>
+    <p><strong>A chef ?</strong> Sr.Geovanna Borges<img src="https://i.pinimg.com/1200x/d1/9b/3c/d19b3c6b009db77bc061853b05289666.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>Temos orgulho dos nossos interiores.</p>
+    <img src="/Imagens/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Horarios de funcionamento</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Seg & terça fechado</p>
+        <p>Quarta-feira 10.00 - 24.00</p>
+        <p>Quinta-feira 10:00 - 24:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Sexta 10:00 - 12:00</p>
+        <p>Sabado 10:00 - 23:00</p>
+        <p>Domingo Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/Modelo de Pizzaria/Imagens/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contato</h1>
+    <pi>Encontre-nos em algum endereço em algum lugar ou ligue para 05050515-122330</p>
+    <p><span class="w3-tag">>Atenção!</span>Oferecemos serviços completos de buffet para qualquer evento, grande ou pequeno. Entendemos suas necessidades e cuidamos para que a comida atenda ao critério mais importante de todos: aparência e sabor.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> uma mesa, peça o especial de hoje ou simplesmente envie-nos uma mensagem:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Quantas pessoas" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Data" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensagem" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">ENVIAR</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
