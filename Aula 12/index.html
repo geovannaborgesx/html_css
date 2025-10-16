@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios de HTML Semântico - Maria</title>
+  <style>
+    body { font-family: 'Times New Roman', Times; margin: 0; background-color:#FADADD; line-height: 1.6; }
+    header, footer { background:#f864893e; color: rgb(59, 50, 50); text-align: center; padding: 15px; }
+    nav a { color: rgb(40, 30, 30); text-decoration: none; margin: 0 10px; }
+    nav a:hover { text-decoration: underline; }
+    section, article, aside, figure { margin: 20px; padding: 15px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    aside { background: #f0f0f0; float: right; width: 30%; }
+    figure{align-items: center; justify-content: center;}
+    figure img { width: 50%; border-radius: 8px; justify-content: center; align-items: center; margin-left: 300px;}
+    figcaption { text-align: center; font-style: italic; margin-top: 5px; }
+    details { background: #f8f8f8; margin: 10px 0; padding: 10px; border-radius: 8px; }
+    mark { background: #b71a88; }
+    time { color: #555; font-style: italic; }
+    h1 { color: #030202; }
+        h2, h3 {color: #222;}
+    
+    .clearfix::after { content: ""; display: block; clear: both; }
+    #galeria{
+        align-items: center;
+    }
+    .fundo{
+      background-color: #f7c9c9;
+    }
+    .populares{
+      width: 500px;
+      height: auto;
+      float: right;
+      height: 750px;
+    }
+    .populares img{
+      width: 50%;
+      align-items: center;
+      margin-left: 24%;
+    }
+    #blog{
+      float: left;
+    }
+    .blog{
+      float: left;
+      width: 750px;
+    }
+    .fundo{
+      background-color: #fcd2e1;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <h1>Portifolio - Geovanna Borges</h1>
+    <p>Explorando o mundo da ge💕</p>
+    <nav>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#pais">Sobre o País</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#blog">Blog</a>
+      <a href="#faq">FAQ</a>
+      <a href="#portfolio">Portfólio</a>
+    </nav>
+  </header>
+
+  <main class="clearfix">
+
+    <section class="fundo" id="hobbies">
+      <h2>Meus Hobbies</h2>
+
+      <section>
+        <h3>Fotografia</h3>
+        <p>Adoro capturar momentos, passeios e gravar vlogs para rever depois.</p>
+      </section>
+
+      <section>
+        <h3>Leitura</h3>
+        <p>Gosto de livros de romance e biografias.</p>
+      </section>
+
+      <section>
+        <h3>Música</h3>
+        <p>Escuto <mark>zé vaqueiro e 2pac</mark>todos os dias!</p>
+      </section>
+    </section>
+
+    <section class="fundo" id="reviews">
+      <h2>Reviews de Filmes</h2>
+
+      <article>
+        <h3>O pequenino</h3>
+        <p>uma comédia onde um anão disfarçado de bebê causa confusões ao tentar recuperar um diamante roubado..</p>
+        <p>O filme explora o humor físico e as aparências enganosas, mostrando como as pessoas podem ser facilmente enganadas pelas aparências.</p>
+      </article>
+
+      <article>
+        <h3>Dois doidões em Harverd</h3>
+        <p>Dois Doidos em Harvard é uma comédia que mostra dois amigos desajustados usando cinzas de um amigo falecido para entrar em Harvard e causar o caos na universidade.</p>
+        <p>O filme mostra que inteligência e sucesso não dependem de status, mas de atitude e amizade.</p>
+      </article>
+
+      <article>
+        <h3>Selvagens</h3>
+        <p>O desenho Selvagens mostra animais urbanos e selvagens vivendo aventuras cômicas enquanto tentam sobreviver e conviver em meio ao caos da cidade.</p>
+        <p>A lição de moral é que amizade e cooperação ajudam a superar desafios.</p>
+      </article>
+    </section>
+
+ 
+    <section id="pais" class="clearfix">
+      <h2>Sobre o Brasil</h2>
+      <p>O Brasil é um país diverso e multicultural, conhecido por suas belezas naturais, música, futebol e rica história.</p>
+
+      <aside>
+        <h3>Curiosidades</h3>
+        <p>O Brasil tem o maior carnaval do mundo, famoso por suas festas e desfiles vibrantes 🎊.</p>
+      </aside>
+    </section>
+
+   
+    <section class="fundo" id="galeria">
+      <h2>Minha Galeria</h2>
+
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Sunset_in_Manaus.jpg" alt="Praia ao pôr do sol">
+        <figcaption>Pôr do sol em Copacabana</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://harus.ind.br/wp-content/uploads/2023/02/5-praias-brasileiras.jpg" alt="Montanhas verdes">
+        <figcaption>Praia copa cabana-12/03/2018</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://img.freepik.com/fotos-premium/o-casal-romantico-em-pe-perto-do-carro-no-fundo-do-belo-por-do-sol_474601-8958.jpg" alt="Cidade iluminada à noite">
+        <figcaption>O amor vive em sp</figcaption>
+      </figure>
+    </section>
+
+
+    <article class="fundo" id="tutorial">
+      <header>
+        <h2>Tutorial: Como Criar um Site</h2>
+        <time datetime="2025-10-16">16 de outubro de 2025</time>
+      </header>
+
+      <section>
+        <h3>1. Estrutura HTML</h3>
+        <p>Monte o esqueleto com cabeçalho, conteúdo e o rodapé.</p>
+      </section>
+
+      <section>
+        <h3>2. Estilo com CSS</h3>
+        <p>Adicione cores, fontes e espaçamentos para deixar o site bonito, organizado e com estilo proprio.</p>
+      </section>
+    </article>
+
+    
+    <section class="fundo" id="blog">
+      <h2>Blog da Ge</h2>
+
+      <aside class="populares">
+            <h3>Posts Populares</h3>
+            <ul>
+              <li>Top 3 melhores glosses</li>
+              <li>1.Big mouth, 2.Eudora, 3.Max love</li>
+              <img src="https://cdn.sistemawbuy.com.br/arquivos/cad5cc7133685cdd8d0d7880d11cba96/produtos/669286b3a7d25/gloss-bigmouth-2-hfxaa1kmgu-669287335292f.jpg" alt="">
+              <img src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_210,h_210/v1/imagens/product/E54613/9663e729-3131-4a03-a86c-fb8e1b8d376e-e56493-niina-secrets-lip-oil-shine-flowers-rosa-silvestre-7ml-frontal-aberto.jpg" alt="">
+              <img src="" alt="">
+            </ul>
+        </aside>
+        
+      <article class="blog">
+        <header>
+          <h3>Meu Primeiro Post</h3>
+          <time datetime="2025-10-15">16/10/2025</time>
+        </header>
+        <section><p>Hoje acordei e me arrumei escutando musica,peguei o onibus com minhas amigas e estou progamando.</p></section>
+        <footer><p>Por Geovanna</p></footer>
+      </article>
+
+      <article class="blog">
+        <header>
+          <h3>Dicas de Estudo</h3>
+          <time datetime="2025-10-16">16/10/2025</time>
+        </header>
+        <section><p>Aulas com anotações (não pause os videos, anote na hora mesmo).</p></section>
+        <footer><p>Por Geovanna</p></footer>
+      </article>
+    </section>
+
+    
+
+   
+    <section class="fundo" id="faq">
+      <h2>Perguntas Frequentes</h2>
+
+      <details>
+        <summary>Oque voce faz no tempo livre</summary>
+        <p>Gosto de organizar meu vsco, escutar musica, ficar com meu irmão,ler (as vezes).</p>
+      </details>
+
+      <details>
+        <summary>Qual seu animal preferido?</summary>
+        <p>Lobo, agua-viva e raposas.</p>
+      </details>
+
+      <details>
+        <summary>O que é JavaScript?Você gosta?</summary>
+        <p>É uma linguagem de programação que torna o site interativo.Gosto, mas quero seguir outro caminho.</p>
+      </details>
+
+      <details>
+        <summary>Qual editor usar?</summary>
+        <p>Visual Studio Code é uma ótima opção.</p>
+      </details>
+
+      <details>
+        <summary>Como publicar um site?</summary>
+        <p>Você pode usar plataformas como GitHub Pages, eu subo todas minhas atividades pelo git.</p>
+      </details>
+    </section>
+
+    <section class="fundo" id="conceito">
+      <h2>Conceito Técnico</h2>
+      <p>O HTML é a base de toda a web moderna.</p>
+      <p>Com CSS, é possível dar estilo e personalidade às páginas.</p>
+      <p>Já o JavaScript traz vida e interatividade ao conteúdo.</p>
+    </section>
+
+    
+    <section class="fundo" id="linha-do-tempo">
+      <h2>Linha do Tempo de Eventos</h2>
+      <article>
+        <h3>Descobrimento do Brasil</h3>
+        <time datetime="1500-04-22">22 de abril de 1500</time>
+      </article>
+      <article>
+        <h3>Independência do Brasil</h3>
+        <time datetime="1822-09-07">7 de setembro de 1822</time>
+      </article>
+      <article>
+        <h3>Proclamação da República</h3>
+        <time datetime="1889-11-15">15 de novembro de 1889</time>
+      </article>
+      <article>
+        <h3>Criação da ONU</h3>
+        <time datetime="1945-10-24">24 de outubro de 1945</time>
+      </article>
+      <article>
+        <h3>Primeira Viagem à Lua</h3>
+        <time datetime="1969-07-20">20 de julho de 1969</time>
+      </article>
+    </section>
+
+
+    <section class="fundo" id="portfolio">
+      <h2>Portfólio Pessoal</h2>
+
+      <section id="sobre">
+        <h3>Sobre Mim</h3>
+        <p>Sou a Geovanna, estudante de design e programação web,sou bem proativa e estou disposta a aprendender coisas.</p>
+      </section>
+
+      <section id="projetos">
+        <h3>Projetos</h3>
+        <article>
+          <h4>Site da Pizzaria StarHouse</h4>
+          <p>Projeto em HTML e CSS com cardápio interativo.</p>
+        </article>
+        <article>
+          <h4>Blog pessoal</h4>
+          <p>Criação de um blog com estrutura semântica e design responsivo.</p>
+        </article>
+      </section>
+
+      <section id="habilidades">
+        <h3>Habilidades</h3>
+        <p>HTML, CSS, Design Gráfico e Comunicação.</p>
+      </section>
+
+     
+  </main>
+
+  <footer>
+    <p>&copy; Geovanna Borges Augusto  — Todos os direitos reservados.</p>
+    <p>Siga-me nas redes sociais @geborgesx</p>
+  </footer>
+
+</body>
+</html>
