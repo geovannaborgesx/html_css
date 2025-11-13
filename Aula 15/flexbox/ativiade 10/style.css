@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3f4f6; /* cinza claro */
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around; /* distribui igualmente as seções */
+  align-items: center;
+  background-color: #490c2d; /* fundo escuro */
+  color: #fff;
+  padding: 20px 0;
+}
+
+.secao {
+  text-align: center;
+  flex: 1; /* cada seção ocupa o mesmo espaço */
+}
+
+.secao h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.secao p {
+  margin: 0;
+  font-size: 0.9rem;
+}

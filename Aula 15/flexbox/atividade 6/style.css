@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Flex */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px; /* espaçamento entre os itens */
+}
+
+/* Estilo dos itens */
+.item {
+  background-color: #37003b;
+  color: white;
+  padding: 40px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  flex: 1 1 200px; /* cresce, encolhe e define largura mínima */
+  text-align: center;
+}

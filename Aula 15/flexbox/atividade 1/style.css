@@ -1,0 +1,19 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+
+  background-color: #f4f5f8; 
+}
+
+
+.quadrado {
+  width: 150px;
+  height: 150px;
+  background-color: #07090a; 
+  border-radius: 12px;
+}

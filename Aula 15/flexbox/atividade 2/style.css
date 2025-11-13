@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container das caixas */
+.container {
+  display: flex;
+  justify-content: space-between; /* espaçamento igual entre as caixas */
+  gap: 20px; /* define o espaçamento direto entre elas */
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Estilo das caixas */
+.caixa {
+  flex: 1; /* faz todas terem o mesmo tamanho */
+  background-color: #ab3b68; /* azul */
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container vertical */
+.container {
+  display: flex;
+  flex-direction: column; /* organiza verticalmente */
+  justify-content: space-between;
+  align-items: stretch; /* faz cada item ocupar toda a largura */
+  width: 80%; /* define a largura total do container */
+  max-width: 600px;
+  height: 60%;
+  gap: 10px;
+}
+
+/* Estilo das caixas */
+.caixa {
+  flex: 1; /* divide o espaço igualmente entre os itens */
+  background-color: #b560b2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}

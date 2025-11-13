@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centraliza a galeria */
+  align-items: center;     /* centraliza verticalmente */
+  background-color: #f3f4f6;
+}
+
+/* Container das imagens */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;          /* permite quebrar linha */
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;
+  gap: 20px;                /* espaçamento entre as imagens */
+  max-width: 1000px;
+}
+
+/* Imagens */
+.galeria img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row-reverse; /* inverte a ordem dos itens */
+  gap: 20px;
+}
+
+/* Estilo dos itens */
+.item {
+  background-color: #d40078;
+  color: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}

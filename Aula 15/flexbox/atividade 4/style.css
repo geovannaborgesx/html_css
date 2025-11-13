@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  /* Centraliza o container no centro da tela */
+  display: flex;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
+
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container das caixas */
+.container {
+  display: flex;
+  flex-direction: column; /* coloca as caixas em coluna (verticalmente) */
+  align-items: center; /* centraliza horizontalmente dentro do container */
+  gap: 20px; /* espaçamento entre as caixas */
+}
+
+/* Estilo das caixas */
+.caixa {
+  width: 200px;
+  height: 80px;
+  background-color: #8b0379;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 10px;
+}

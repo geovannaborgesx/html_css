@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centraliza o container na tela */
+  align-items: center;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Flex */
+.container {
+  display: flex;
+  justify-content: space-between; /* distribui os itens com espaçamento igual */
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  background-color: #e5e7eb;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Itens */
+.item {
+  background-color: #99429a;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}

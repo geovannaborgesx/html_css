@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centraliza o container */
+  align-items: center;     /* centraliza verticalmente */
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: flex-end; /* alinha os itens à direita */
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  max-width: 800px;
+  background-color: #e5e7eb;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Itens */
+.item {
+  background-color: #700000;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
