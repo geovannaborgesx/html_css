@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Educação para o Futuro</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: #0f172a;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            color: #3b82f6;
+        }
+
+        .nav-logo span {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        .btn-donate-nav {
+            background: #2563eb;
+            color: white;
+            padding: 0.625rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-donate-nav:hover {
+            background: #1d4ed8;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: #0f172a;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #0f172a, rgba(15, 23, 42, 0.8), transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        .hero-text {
+            max-width: 42rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.025em;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: #3b82f6;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            border: 1px solid #6b7280;
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+            border-color: white;
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5rem 1rem;
+        }
+
+        section h2 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        section .subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 56rem;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            background: #dbeafe;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            color: #64748b;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .status-active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-completed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-meta {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        /* Donate Section */
+        .donate-container {
+            max-width: 42rem;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate-trust {
+            background: #dbeafe;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #1e40af;
+            font-size: 0.875rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.75rem;
+            }
+
+            .donate-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">IEF<span>.</span></div>
+            <div class="nav-links">
+                <a href="#quem">Quem Somos</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#doacao" class="btn-donate-nav">Doe Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-bg">
+            <img src="https://static.lumi.new/04/04db8c444dfcb92d56211dadc4bdf9c2.png" alt="Education Background">
+        </div>
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transformando vidas através da <span class="highlight">tecnologia</span> e inclusão</h1>
+                <p>O Instituto Educação para o Futuro prepara novas gerações para os desafios de amanhã, garantindo oportunidades de aprendizagem para todos.</p>
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn-primary">Conheça Nossos Projetos →</a>
+                    <a href="#quem" class="btn-secondary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="quem">
+        <h2>Quem Somos</h2>
+        <p class="subtitle">Dedicados a transformar o futuro através da educação</p>
+        <div class="about-content">
+            <p>
+                O Instituto Educação para o Futuro desenvolve projetos educacionais
+                voltados para jovens e crianças, promovendo inclusão social através da tecnologia.
+                Nosso foco é garantir oportunidades de aprendizagem e preparar novas gerações
+                para o futuro.
+            </p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>Inclusão</h3>
+                <p>Acreditamos que educação de qualidade é um direito de todos, independentemente de origem ou condição social.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🎓</div>
+                <h3>Educação Transformadora</h3>
+                <p>Nossos programas são desenhados para empoderar jovens e criar agentes de mudança em suas comunidades.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <h3>Inovação Social</h3>
+                <p>Combinamos tecnologia e pedagogia moderna para criar experiências de aprendizagem impactantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos">
+        <h2>Nossos Projetos</h2>
+        <p class="subtitle">Iniciativas que transformam vidas</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://static.lumi.new/db/db41a3993a0383a05624e9e9baf616cb.png" alt="CodeKids" class="project-image">
+                <div class="project-content">
+                    <span class="project-status status-active">Ativo</span>
+                    <h3>CodeKids</h3>
+                    <p class="project-meta">👶 Crianças de 8 a 12 anos • 🗓️ Desde 2022</p>
+                    <p>Introdução à lógica de programação através de jogos e atividades lúdicas, despertando o interesse pela tecnologia desde cedo.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://static.lumi.new/73/7304a5513728f2639434f9b10f88e552.png" alt="Juventude Digital" class="project-image">
+                <div class="project-content">
+                    <span class="project-status status-completed">Concluído</span>
+                    <h3>Juventude Digital</h3>
+                    <p class="project-meta">👦 Adolescentes de 13 a 17 anos • 🗓️ 2021-2023</p>
+                    <p>Programa intensivo de desenvolvimento web e mobile, preparando jovens para o mercado de tecnologia.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://static.lumi.new/cd/cd9b0a4221b007d4f7378c887907f737.png" alt="Tech Inclusivo" class="project-image">
+                <div class="project-content">
+                    <span class="project-status status-active">Ativo</span>
+                    <h3>Tech Inclusivo</h3>
+                    <p class="project-meta">👨‍💼 Jovens em vulnerabilidade • 🗓️ Desde 2023</p>
+                    <p>Capacitação profissional em tecnologia para jovens em situação de vulnerabilidade social, incluindo mentoria e inserção no mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe">
+        <h2>Nossa Equipe</h2>
+        <p class="subtitle">Profissionais dedicados à transformação social</p>
+        
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://static.lumi.new/8d/8d99534c25cc9a0e188fca91ad3d8ad5.png" alt="Ana Souza" class="team-image">
+                <div class="team-info">
+                    <h3>Ana Souza</h3>
+                    <p>Coordenadora Pedagógica</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="https://static.lumi.new/bb/bb87ab1218613762a672f8d95034bfa1.png" alt="Lucas Andrade" class="team-image">
+                <div class="team-info">
+                    <h3>Lucas Andrade</h3>
+                    <p>Instrutor de Tecnologia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="doacao">
+        <h2>Faça Parte Dessa Transformação</h2>
+        <p class="subtitle">Sua contribuição cria oportunidades reais</p>
+        
+        <div class="donate-container">
+            <div class="donate-trust">
+                🔒 Pagamento 100% seguro • Recibo fiscal disponível
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">Valor da Doação (R$)</label>
+                    <input type="number" id="valor" placeholder="100" min="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="metodo">Método de Pagamento</label>
+                    <select id="metodo" required>
+                        <option value="">Selecione um método</option>
+                        <option value="pix">Pix</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="boleto">Boleto Bancário</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Fazer Doação ❤️</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>Instituto Educação para o Futuro</strong></p>
+            <p>📍 Rua Fictícia, 123 - São Paulo/SP</p>
+            <p>📧 instituto@futuro.org</p>
+            <p style="margin-top: 2rem; color: #64748b;">&copy; 2025 Instituto Educação para o Futuro - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>
